@@ -12,10 +12,10 @@ public class SmartSpeaker {
     }
 
     public void activate(){
-        backlight.execute();
-        mute.execute();
-        outputChannel.execute();
         volume.execute();
+        mute.execute();
+        backlight.execute();
+        outputChannel.execute();
     }
     public void setBacklight(Connectivity backlight) {
         this.backlight = backlight;
