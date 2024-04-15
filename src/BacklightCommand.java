@@ -6,6 +6,11 @@ public class BacklightCommand implements Connectivity{
     public void setBacklight(Backlight backlight) {
         this.backlight = backlight;
     }
+
+    public String getBacklight() {
+        return backlight.name();
+    }
+
     @Override
     public void execute() {
         System.out.printf("Состояние подсветки динамика: %s\n",backlight.name());

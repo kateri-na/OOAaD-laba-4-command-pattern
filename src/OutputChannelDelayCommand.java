@@ -12,6 +12,11 @@ public class OutputChannelDelayCommand implements Connectivity{
         }
         else throw new IllegalArgumentException("Недопустимое значение задержки выходного канала: должно быть 0-1024");
     }
+
+    public int getDelay() {
+        return delay;
+    }
+
     @Override
     public void execute() {
         System.out.printf("Задержка выходного канала: %d\n", delay);

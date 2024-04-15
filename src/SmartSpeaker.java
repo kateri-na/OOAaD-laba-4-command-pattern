@@ -29,4 +29,17 @@ public class SmartSpeaker {
     public void setVolume(Connectivity volume) {
         this.volume = volume;
     }
+
+    public Connectivity getBacklight() {
+        return backlight;
+    }
+    public Connectivity getMute() {
+        return mute;
+    }
+    public Connectivity getOutputChannel() {
+        return outputChannel;
+    }
+    public Connectivity getVolume() {
+        return volume;
+    }
 }

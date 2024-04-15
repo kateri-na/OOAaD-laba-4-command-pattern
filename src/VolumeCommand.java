@@ -12,6 +12,11 @@ public class VolumeCommand implements Connectivity{
         }
         else throw new IllegalArgumentException("Недопустимое значение громкости: должно быть 0-100");
     }
+
+    public int getVolume() {
+        return volume;
+    }
+
     @Override
     public void execute() {
         System.out.printf("Значение громкости: %d\n", volume);

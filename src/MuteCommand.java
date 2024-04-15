@@ -6,6 +6,9 @@ public class MuteCommand implements Connectivity{
     public void setMute(boolean mute) {
         this.mute = mute;
     }
+    public boolean isMute() {
+        return mute;
+    }
     @Override
     public void execute() {
         System.out.printf("Значение режима mute: %b\n", mute);
