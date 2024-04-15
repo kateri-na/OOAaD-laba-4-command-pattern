@@ -3,12 +3,11 @@ public class MuteCommand implements Connectivity{
     MuteCommand(boolean mute){
         this.mute = mute;
     }
-    public void muteChange(boolean mute){
+    public void setMute(boolean mute) {
         this.mute = mute;
-        System.out.printf("Значение режима mute: %b", mute);
     }
     @Override
-    public void execute(Object parameter) {
-        muteChange((boolean)parameter);
+    public void execute() {
+        System.out.printf("Значение режима mute: %b\n", mute);
     }
 }

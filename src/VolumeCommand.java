@@ -1,19 +1,19 @@
 public class VolumeCommand implements Connectivity{
     private int volume;
     public VolumeCommand(int volume){
-        this.volume= volume;
-    }
-    public void volumeChange(int volume){
         if(volume>=0 && volume<=100) {
             this.volume = volume;
-            System.out.printf("Значение громкости: %d", volume);
         }
-        else{
-            System.out.println("Недопустимое значение громкости");
+        else throw new IllegalArgumentException("Недопустимое значение громкости: должно быть 0-100");
+    }
+    public void setVolume(int volume) {
+        if(volume>=0 && volume<=100) {
+            this.volume = volume;
         }
+        else throw new IllegalArgumentException("Недопустимое значение громкости: должно быть 0-100");
     }
     @Override
-    public void execute(Object volume) {
-        volumeChange((int)volume);
+    public void execute() {
+        System.out.printf("Значение громкости: %d\n", volume);
     }
 }
